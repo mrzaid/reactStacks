@@ -33,18 +33,35 @@ import React, {Component}  from 'react';
         //more than one
 class App2 extends Component{
 
- state = {lname: "start value",
-fname: "start value"}
+ state = {
+lname: "",
+fname: ""}
 whenChange = (event) => {
     //console.log(event.target.name);
     //console.dir(event.target.value);
     console.log(this)
-    //const {name,value} = event.target //destructuring
-    const name = event.target.name;
-    const value = event.target.value;
-                    //this [will get values]    
+    const {name,value} = event.target //destructuring
+    // const name = event.target.name;
+    // const value = event.target.value;
+                    //this [will get values] 
     this.setState({ [name]:value })
     }
+
+
+
+
+
+        //shayad chalay
+    // whenChange = {event.target.name,event.target.fname} => {
+    //     //console.log(event.target.name);
+    //     //console.dir(event.target.value);
+    //     console.log(this)
+    //     const {name,value} = event.target //destructuring
+    //     // const name = event.target.name;
+    //     // const value = event.target.value;
+    //                     //this [will get values] 
+    //     this.setState({ [name]:value })
+    //     }    
   render(){
       return(
           <div> <span>
